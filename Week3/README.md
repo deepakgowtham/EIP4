@@ -1,8 +1,8 @@
-#Final Accuracy on Base Network
+ # Final Accuracy on Base Network
 Accuracy on test data is: 82.29
 
 
-#Model Definition
+ # Model Definition
 model_2= Sequential()
 model_2.add(SeparableConv2D(32, (3, 3), activation='relu', input_shape=(32, 32, 3) )) # 30, 3
 model_2.add(BatchNormalization())
@@ -42,15 +42,15 @@ model_2.add(Flatten())
 model_2.add(Activation('softmax'))
 
 
-#Epoch Logs
+ # Epoch Logs
 
 Epoch 1/50
   1/781 [..............................] - ETA: 2:15 - loss: 1.4406 - acc: 0.5000
 
 /usr/local/lib/python3.6/dist-packages/ipykernel_launcher.py:11: UserWarning: The semantics of the Keras 2 argument `steps_per_epoch` is not the same as the Keras 1 argument `samples_per_epoch`. `steps_per_epoch` is the number of batches to draw from the generator at each epoch. Basically steps_per_epoch = samples_per_epoch/batch_size. Similarly `nb_val_samples`->`validation_steps` and `val_samples`->`steps` arguments have changed. Update your method calls accordingly.
-  # This is added back by InteractiveShellApp.init_path()
+  #This is added back by InteractiveShellApp.init_path()
 /usr/local/lib/python3.6/dist-packages/ipykernel_launcher.py:11: UserWarning: Update your `fit_generator` call to the Keras 2 API: `fit_generator(<keras_pre..., validation_data=(array([[[..., verbose=1, workers=-1, steps_per_epoch=781, epochs=50)`
-  # This is added back by InteractiveShellApp.init_path()
+  #This is added back by InteractiveShellApp.init_path()
 
 781/781 [==============================] - 65s 83ms/step - loss: 1.3250 - acc: 0.5330 - val_loss: 1.2076 - val_acc: 0.5808
 Epoch 2/50
@@ -71,6 +71,7 @@ Epoch 9/50
 781/781 [==============================] - 64s 82ms/step - loss: 0.8270 - acc: 0.7098 - val_loss: 0.7243 - val_acc: 0.7495
 Epoch 10/50
 781/781 [==============================] - 64s 82ms/step - loss: 0.8024 - acc: 0.7185 - val_loss: 0.7563 - val_acc: 0.7423
+
 Epoch 11/50
 781/781 [==============================] - 64s 82ms/step - loss: 0.7868 - acc: 0.7243 - val_loss: 0.6916 - val_acc: 0.7627
 Epoch 12/50
@@ -91,6 +92,7 @@ Epoch 19/50
 781/781 [==============================] - 64s 82ms/step - loss: 0.6942 - acc: 0.7572 - val_loss: 0.6115 - val_acc: 0.7898
 Epoch 20/50
 781/781 [==============================] - 64s 82ms/step - loss: 0.6838 - acc: 0.7594 - val_loss: 0.6482 - val_acc: 0.7758
+
 Epoch 21/50
 781/781 [==============================] - 64s 82ms/step - loss: 0.6739 - acc: 0.7653 - val_loss: 0.6223 - val_acc: 0.7899
 Epoch 22/50
@@ -111,6 +113,7 @@ Epoch 29/50
 781/781 [==============================] - 64s 82ms/step - loss: 0.6208 - acc: 0.7849 - val_loss: 0.5774 - val_acc: 0.7986
 Epoch 30/50
 781/781 [==============================] - 64s 82ms/step - loss: 0.6173 - acc: 0.7846 - val_loss: 0.5649 - val_acc: 0.8050
+
 Epoch 31/50
 781/781 [==============================] - 64s 82ms/step - loss: 0.6115 - acc: 0.7867 - val_loss: 0.5819 - val_acc: 0.8058
 Epoch 32/50
@@ -131,6 +134,7 @@ Epoch 39/50
 781/781 [==============================] - 64s 82ms/step - loss: 0.5750 - acc: 0.7994 - val_loss: 0.5543 - val_acc: 0.8155
 Epoch 40/50
 781/781 [==============================] - 64s 82ms/step - loss: 0.5695 - acc: 0.8015 - val_loss: 0.5666 - val_acc: 0.8077
+
 Epoch 41/50
 781/781 [==============================] - 63s 81ms/step - loss: 0.5633 - acc: 0.8017 - val_loss: 0.5352 - val_acc: 0.8203
 Epoch 42/50
@@ -151,4 +155,5 @@ Epoch 49/50
 781/781 [==============================] - 64s 82ms/step - loss: 0.5409 - acc: 0.8088 - val_loss: 0.5439 - val_acc: 0.8152
 Epoch 50/50
 781/781 [==============================] - 64s 82ms/step - loss: 0.5358 - acc: 0.8121 - val_loss: 0.5049 - val_acc: 0.8259
+
 Model took 3194.11 seconds to train
